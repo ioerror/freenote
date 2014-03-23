@@ -18,7 +18,7 @@ fashion without a third party.
 
 In addition to a remote OGG video stream available on a Tor Hidden Service and
 a remote shoutcast server, it also records a local copy of the video in a Free
-format.
+format to your system.
 
 Requirements
 ============
@@ -31,11 +31,14 @@ Please install the following software packages:
   gstreamer0.10-plugins-{good,bad,ugly,base,base-apps}
   gstreamer0.10-{pulseaudio,x,alsa,ffmpeg,tools,doc}
 
+The Debian machine should use pulse audio, though future versions may automatically
+discover and configure audio devices.
+
 Details
 =======
 
 This is specifically configured for streaming 640x480 video with a text overlay
-using a Logitech HD camera.
+using a common Logitech HD USB camera.
 
 To serve video over a Tor Hidden Service, you will need to add the following to
 your Tor configuration file:
@@ -47,16 +50,28 @@ After reconfiguring, share the hostname found in the following file:
 
   /var/lib/tor/hidden_service_video_streamer/hostname
 
-With Tor Browser, one can directly watch the video without any additional software
+
+Viewing the video and audio stream
+==================================
+
+With Tor Browser, one can directly watch the video without any additional
+software:
 
   http://ylq7gsof3t3wrdkz.onion
 
-It is also possible to watch the video stream with cvlc:
+It is also possible to watch the video stream with cvlc (configure vlc to use
+Tor as a SOCKS proxy):
 
   cvlc tcp://ylq7gsof3t3wrdkz.onion
 
 Mplayer and netcat may also work:
 
-  usewithtor nc ylq7gsof3t3wrdkz.onion 8080| mplayer -cache -
+  usewithtor nc ylq7gsof3t3wrdkz.onion 8080| mplayer -cache 32 -
 
-Install the packages, configure Tor and run `stream.sh` - it should Just Work!
+Install the required packages, configure Tor and run `stream.sh` - it should
+Just Work!
+
+Contact
+=======
+
+Send feedback to jacob at appelbaum dot net
