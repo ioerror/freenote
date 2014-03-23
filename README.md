@@ -50,23 +50,22 @@ After reconfiguring, share the hostname found in the following file:
 
   /var/lib/tor/hidden_service_video_streamer/hostname
 
-
 Viewing the video and audio stream
 ==================================
 
 With Tor Browser, one can directly watch the video without any additional
 software:
 
-  http://ylq7gsof3t3wrdkz.onion
+  `http://ylq7gsof3t3wrdkz.onion`
 
 It is also possible to watch the video stream with cvlc (configure vlc to use
 Tor as a SOCKS proxy):
 
-  cvlc tcp://ylq7gsof3t3wrdkz.onion
+  `cvlc tcp://ylq7gsof3t3wrdkz.onion`
 
 Mplayer and netcat may also work:
 
-  usewithtor nc ylq7gsof3t3wrdkz.onion 80| mplayer -cache 32 -
+  `usewithtor nc ylq7gsof3t3wrdkz.onion 80| mplayer -cache 32 - `
 
 Install the required packages, configure Tor and run `stream.sh` - it should
 Just Work!
