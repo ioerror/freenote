@@ -26,7 +26,7 @@ Requirements
 This has been tested on a Debian machine running a mix of stable and testing.
 Please install the following software packages:
 
-  tor 
+  tor
   torsocks
   gstreamer0.10-plugins-{good,bad,ugly,base,base-apps}
   gstreamer0.10-{pulseaudio,x,alsa,ffmpeg,tools,doc}
