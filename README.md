@@ -66,7 +66,7 @@ Tor as a SOCKS proxy):
 
 Mplayer and netcat may also work:
 
-  usewithtor nc ylq7gsof3t3wrdkz.onion 8080| mplayer -cache 32 -
+  usewithtor nc ylq7gsof3t3wrdkz.onion 80| mplayer -cache 32 -
 
 Install the required packages, configure Tor and run `stream.sh` - it should
 Just Work!
