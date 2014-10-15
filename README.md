@@ -26,10 +26,10 @@ Requirements
 This has been tested on a Debian machine running a mix of stable and testing.
 Please install the following software packages:
 
-  tor
-  torsocks
-  gstreamer0.10-plugins-{good,bad,ugly,base,base-apps}
-  gstreamer0.10-{pulseaudio,x,alsa,ffmpeg,tools,doc}
+    tor
+    torsocks
+    gstreamer0.10-plugins-{good,bad,ugly,base,base-apps}
+    gstreamer0.10-{pulseaudio,x,alsa,ffmpeg,tools,doc}
 
 The Debian machine should use pulse audio, though future versions may automatically
 discover and configure audio devices.
@@ -43,12 +43,12 @@ using a common Logitech HD USB camera.
 To serve video over a Tor Hidden Service, you will need to add the following to
 your Tor configuration file:
 
-  HiddenServiceDir /var/lib/tor/hidden_service_video_streamer/
-  HiddenServicePort 80 127.0.0.1:8080
+    HiddenServiceDir /var/lib/tor/hidden_service_video_streamer/
+    HiddenServicePort 80 127.0.0.1:8080
 
 After reconfiguring, share the hostname found in the following file:
 
-  /var/lib/tor/hidden_service_video_streamer/hostname
+    /var/lib/tor/hidden_service_video_streamer/hostname
 
 Viewing the video and audio stream
 ==================================
@@ -56,16 +56,16 @@ Viewing the video and audio stream
 With Tor Browser, one can directly watch the video without any additional
 software:
 
-  `http://ylq7gsof3t3wrdkz.onion`
+    http://ylq7gsof3t3wrdkz.onion
 
 It is also possible to watch the video stream with cvlc (configure vlc to use
 Tor as a SOCKS proxy):
 
-  `cvlc tcp://ylq7gsof3t3wrdkz.onion`
+    cvlc tcp://ylq7gsof3t3wrdkz.onion
 
 Mplayer and netcat may also work:
 
-  `usewithtor nc ylq7gsof3t3wrdkz.onion 80| mplayer -cache 32 - `
+    usewithtor nc ylq7gsof3t3wrdkz.onion 80| mplayer -cache 32 -
 
 Install the required packages, configure Tor and run `stream.sh` - it should
 Just Work!
